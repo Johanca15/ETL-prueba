@@ -83,7 +83,6 @@ ETL_PRUEBA/
 ├── README.md                      # Documentación del proyecto
 ├── .gitignore                     # Archivos excluidos del repositorio
 ├── conexion.py                    # Prueba de conexión a PostgreSQL (Aiven)
-└── requirements.txt               # Dependencias del proyecto
 
 # PASO A PASO PARA EJECTURAR EL ETL:
 
@@ -97,5 +96,3 @@ Cada script dentro de la carpeta `sql/` representa un proceso ETL o una consulta
 5. Tener descargados los datasets, explicado mas arriba
 5. Ejecutar el script deseado o vista deseada
 
-├── conexion.py                    # Prueba de conexión a PostgreSQL (Aiven)
-└── requirements.txt               # Dependencias del proyecto
