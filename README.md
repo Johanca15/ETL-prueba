@@ -28,7 +28,8 @@ La base de datos utilizada es 'defaultb' en Aiven. Ejemplo del formato de conexi
 
 # Dataset
 
-Se generaron estos archivos en formato CSV y se almacenan localmente en la carpeta 'dataset/', no se incluyeron en el reporsitorio.
+Se generaron estos archivos en formato CSV y se almacenan localmente en la carpeta 'dataset/', no se incluyeron en el reporsitorio debido a que git solo aceptan 100mb max. Los dejare adjuntos en el correo.
+
 - https://datos.gob.do/dataset/edesur-cobros-rd-mm 
 - https://dgii.gov.do/herramientas/consultas/Paginas/RNC.aspx
 
