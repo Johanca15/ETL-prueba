@@ -28,8 +28,12 @@ La base de datos utilizada es 'defaultb' en Aiven. Ejemplo del formato de conexi
 
 # Dataset
 
-Se generaron estos archivos en formato CSV y se almacenan localmente en la carpeta 'dataset/', no se incluyeron en el reporsitorio debido a que git solo aceptan 100mb max. Los dejare adjuntos en el correo.
+Pasos:
+1. Generar los datasets de los links suministrados 
+2. Renombrar como edesur_cobros.csv al dataset de edesur
+3. Renombrar como rnc.csv al dataset de DGII
 
+Se generaron estos archivos en formato CSV y se almacenan localmente en la carpeta 'dataset/', no se incluyeron en el reporsitorio.
 - https://datos.gob.do/dataset/edesur-cobros-rd-mm 
 - https://dgii.gov.do/herramientas/consultas/Paginas/RNC.aspx
 
@@ -78,5 +82,20 @@ ETL_PRUEBA/
 │
 ├── README.md                      # Documentación del proyecto
 ├── .gitignore                     # Archivos excluidos del repositorio
+├── conexion.py                    # Prueba de conexión a PostgreSQL (Aiven)
+└── requirements.txt               # Dependencias del proyecto
+
+# PASO A PASO PARA EJECTURAR EL ETL:
+
+Este proyecto no utiliza un archivo main.py.  
+Cada script dentro de la carpeta `sql/` representa un proceso ETL o una consulta independiente.
+
+1. Clonar el repositorio
+2. Crear y activar un entorno virtual
+3. Instalar las dependencias necesarias (pandas,sqlalchemy)
+4. Configurar la conexión a la base de datos en `conexion.py`(debe colocar las credenciales suministradas al momento de crear una BD en Aiven, en este caso PostgreBD)
+5. Tener descargados los datasets, explicado mas arriba
+5. Ejecutar el script deseado o vista deseada
+
 ├── conexion.py                    # Prueba de conexión a PostgreSQL (Aiven)
 └── requirements.txt               # Dependencias del proyecto
