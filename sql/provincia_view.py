@@ -1,11 +1,11 @@
 from sqlalchemy import create_engine, text
+import pandas as pd
 
-# conexion
-engine = create_engine("postgresql://avnadmin:AVNS_p0zuxjh8CTzz02T6Iif@pg-156ebb68-johancasantos15-a74f.d.aivencloud.com:12464/defaultdb?sslmode=require")
+engine = create_engine(
+    "postgresql://avnadmin:AVNS_p0zuxjh8CTzz02T6Iif@pg-156ebb68-johancasantos15-a74f.d.aivencloud.com:12464/defaultdb?sslmode=require")
 
-
-#vistas
-create_views_sql = """
+# Crear vistas
+query1 = """
 CREATE OR REPLACE VIEW vw_cobros_por_zona AS
 SELECT
     zona,
@@ -23,7 +23,19 @@ GROUP BY zona, anio;
 """
 
 with engine.connect() as conn:
-    conn.execute(text(create_views_sql))
+    conn.execute(text(query1))
     conn.commit()
 
-print("Vistas creadas")
+print("Vista creada")
+
+
+#salida
+select_sql = """
+SELECT *FROM vw_cobros_por_zona ORDER BY zona;
+"""
+
+with engine.connect() as conn:
+    result = conn.execute(text(select_sql))
+
+    for row in result.mappings():
+        print(dict(row))

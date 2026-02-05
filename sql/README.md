@@ -84,3 +84,15 @@ ETL_PRUEBA/
 ├── .gitignore                     # Archivos excluidos del repositorio
 ├── conexion.py                    # Prueba de conexión a PostgreSQL (Aiven)
 └── requirements.txt               # Dependencias del proyecto
+
+# PASO A PASO PARA EJECTURAR EL ETL:
+
+Este proyecto no utiliza un archivo main.py.  
+Cada script dentro de la carpeta `sql/` representa un proceso ETL o una consulta independiente.
+
+1. Clonar el repositorio
+2. Crear y activar un entorno virtual
+3. Instalar las dependencias necesarias (pandas,sqlalchemy)
+4. Configurar la conexión a la base de datos en `conexion.py`(debe colocar las credenciales suministradas al momento de crear una BD en Aiven, en este caso PostgreBD)
+5. Tener descargados los datasets, explicado mas arriba
+5. Ejecutar el script deseado o vista deseada
