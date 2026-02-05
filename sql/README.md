@@ -28,6 +28,11 @@ La base de datos utilizada es 'defaultb' en Aiven. Ejemplo del formato de conexi
 
 # Dataset
 
+Pasos:
+1. Generar los datasets de los links suministrados 
+2. Renombrar como edesur_cobros.csv al dataset de edesur
+3. Renombrar como rnc.csv al dataset de DGII
+
 Se generaron estos archivos en formato CSV y se almacenan localmente en la carpeta 'dataset/', no se incluyeron en el reporsitorio.
 - https://datos.gob.do/dataset/edesur-cobros-rd-mm 
 - https://dgii.gov.do/herramientas/consultas/Paginas/RNC.aspx
